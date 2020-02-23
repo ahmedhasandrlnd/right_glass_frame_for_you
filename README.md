@@ -49,6 +49,7 @@ A cloud formation template consists of multiple sections. Typical sections inclu
 1. The single most important section of a cloud formation template is the resources section, because, after all, the primary job here is to provision the resources. So in here we would have a list of resources, and those resources could include instances, security groups, S3 buckets, VPCs, etc. 
 1. Typically, the last section of a cloud formation template is outputs. Outputs specify the values from the template that the template developer feels should be easy to access in a given stack. These can be accessed easily via the AWS console, or the CLI or API. A classic example of an output is the endpoint of an ELB. When provisioning a web stack, it is usually the single most important piece of information a user would want to access after deploying the stack, because it is the endpoint that they will use to check if the template has deployed correctly. By making this endpoint an output, the user can access the endpoint from the outputs console, and test the stack conveniently. Once a template contains some or all of these sections, it can be used to create a cloud formation stack.
 <hr/> 
+
 ```
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
@@ -94,7 +95,6 @@ A cloud formation template consists of multiple sections. Typical sections inclu
     }
   } 
 }
-
 ```
 [Back to Table of Content](#index)
 
