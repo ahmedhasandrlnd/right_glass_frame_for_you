@@ -23,7 +23,7 @@
 
 <a id='video'></a>
 **_Video Demo of the deployed App_**
-![Right Frame Preview](gif/Glass_frame_preview.gif)
+![Right Frame Preview](gif/Glass_frame_preview.gif|width=100)
 <hr/> 
 
 [Back to Table of Content](#index)
