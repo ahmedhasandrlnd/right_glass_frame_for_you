@@ -49,5 +49,51 @@ A cloud formation template consists of multiple sections. Typical sections inclu
 1. The single most important section of a cloud formation template is the resources section, because, after all, the primary job here is to provision the resources. So in here we would have a list of resources, and those resources could include instances, security groups, S3 buckets, VPCs, etc. 
 1. Typically, the last section of a cloud formation template is outputs. Outputs specify the values from the template that the template developer feels should be easy to access in a given stack. These can be accessed easily via the AWS console, or the CLI or API. A classic example of an output is the endpoint of an ELB. When provisioning a web stack, it is usually the single most important piece of information a user would want to access after deploying the stack, because it is the endpoint that they will use to check if the template has deployed correctly. By making this endpoint an output, the user can access the endpoint from the outputs console, and test the stack conveniently. Once a template contains some or all of these sections, it can be used to create a cloud formation stack.
 <hr/> 
+```
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
 
+  "Description" : "AWS CloudFormation Sample Template S3_Website_Bucket_With_Retain_On_Delete: Sample template showing how to create a publicly accessible S3 bucket configured for website access with a deletion policy of retail on delete. **WARNING** This template creates an S3 bucket that will NOT be deleted when the stack is deleted. You will be billed for the AWS resources used if you create a stack from this template.",
+
+  "Resources" : {
+    "S3Bucket" : {
+      "Type" : "AWS::S3::Bucket",
+      "Properties" : {
+        "AccessControl" : "PublicRead",
+        "WebsiteConfiguration" : {
+          "IndexDocument" : "index.html",
+          "ErrorDocument" : "error.html"      
+         }
+      },
+      "DeletionPolicy" : "Retain"
+    },
+    "mybucketpolicy" : {
+      "Type" : "AWS::S3::BucketPolicy",
+      "Properties" : {
+         "PolicyDocument" : {
+            "Version":"2012-10-17",
+            "Statement":[{
+	       "Sid":"PublicReadGetObject",
+               "Effect":"Allow",
+	       "Principal": "*",
+               "Action":["s3:GetObject"],
+               "Resource" : { "Fn::Join" : [ 
+               "", [ "arn:aws:s3:::", { "Ref" : "S3Bucket" } , "/*" ]
+               ] }
+             }]
+         },
+        "Bucket" : { "Ref" : "S3Bucket" }
+      }
+    }
+   },
+
+  "Outputs" : {
+    "WebsiteURL" : {
+      "Value" : { "Fn::GetAtt" : [ "S3Bucket", "WebsiteURL" ] },
+      "Description" : "URL for website hosted on S3"
+    }
+  } 
+}
+
+```
 [Back to Table of Content](#index)
