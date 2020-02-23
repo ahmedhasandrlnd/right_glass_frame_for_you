@@ -4,12 +4,7 @@
 ## Table of Contents
 - [Project Overview](#overview)
 - [How AI works](#works)
-- [Usage Instructions](#run)
-  - [Data Cleaning](#cleaning)
-  - [Training Classifier](#training)
-  - [Starting the Web App](#starting)
-  	- [Running in localhost](#local)
-  	- [ngrok Deployment](#ngrok)
+- [Infrastructure Diagram](#diagram)
 - [Conclusion](#conclusion)
 - [Software Requirements](#sw)
 - [Files](#files)
@@ -36,6 +31,13 @@ Artificial Intelligence (AI) can come as rescue in this scenario. AI is already 
 ## How AI works here
 All the input images of this webapp are taken from https://thispersondoesnotexist.com/, but it will work with any passport sized photograph. In the first step, 35 facial landmarks are estimated from the face of the image. Then a transperant background glass frame is superimposed on the face using the guide of these facial landmarks.  <br/>
 ![Steps](images/steps.JPG)
+<hr/> 
+
+[Back to Table of Content](#index)
+
+<a id='diagram'></a>
+## Infrastructure Diagram
+![Diagram](images/diagram.JPG)
 <hr/> 
 
 [Back to Table of Content](#index)
