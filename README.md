@@ -34,7 +34,7 @@ Artificial Intelligence (AI) can come as rescue in this scenario. AI is already 
  
 <a id='works'></a>
 ## How AI works here
-All the input imgages of this webapp are taken from https://thispersondoesnotexist.com/, but it will work with any passport sized photograph. In the first step, 35 facial landmarks are estimated from the face of the image. Then a trasperant glass frame is superimposed on the face using the guide of these facial landmarks.  <br/>
+All the input images of this webapp are taken from https://thispersondoesnotexist.com/, but it will work with any passport sized photograph. In the first step, 35 facial landmarks are estimated from the face of the image. Then a transperant background glass frame is superimposed on the face using the guide of these facial landmarks.  <br/>
 ![Steps](images/steps.JPG)
 <hr/> 
 
