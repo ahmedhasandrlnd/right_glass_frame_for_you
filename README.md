@@ -10,8 +10,7 @@
 
 
 <a id='video'></a>
-**_Video Demo of the [deployed App](http://exampleframe.com.s3-website.ca-central-1.amazonaws.com/)_**
-**Website of the deployed App (http://exampleframe.com.s3-website.ca-central-1.amazonaws.com/)**
+**_Video Demo of the [deployed App](http://exampleframe.com.s3-website.ca-central-1.amazonaws.com/)(http://exampleframe.com.s3-website.ca-central-1.amazonaws.com/)_**
 ![Right Frame Preview](gif/Glass_frame_preview.gif)
 <hr/> 
 
@@ -106,6 +105,7 @@ JSON File
 ## References
 1. [Host a Static Website](https://aws.amazon.com/getting-started/projects/host-static-website/)
 1. [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-services-us-west-2.html#w2ab1c28c58c13c35)
+1. [deployed App](http://exampleframe.com.s3-website.ca-central-1.amazonaws.com/)
 <hr/> 
 
 [Back to Table of Content](#index)
