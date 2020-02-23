@@ -6,7 +6,7 @@
 - [How AI works](#works)
 - [Infrastructure Diagram](#diagram)
 - [CloudFormation](#cloudformation)
-- [Future work](#future)
+- [References](#ref)
 
 
 <a id='video'></a>
@@ -96,4 +96,11 @@ A cloud formation template consists of multiple sections. Typical sections inclu
 }
 
 ```
+[Back to Table of Content](#index)
+
+<a id='ref'></a>
+## References
+[Host a Static Website](https://aws.amazon.com/getting-started/projects/host-static-website/)
+<hr/> 
+
 [Back to Table of Content](#index)
