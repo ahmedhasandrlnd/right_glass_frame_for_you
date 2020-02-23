@@ -100,7 +100,8 @@ A cloud formation template consists of multiple sections. Typical sections inclu
 
 <a id='ref'></a>
 ## References
-[Host a Static Website](https://aws.amazon.com/getting-started/projects/host-static-website/)
+1. [Host a Static Website](https://aws.amazon.com/getting-started/projects/host-static-website/)
+1. [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-services-us-west-2.html#w2ab1c28c58c13c35)
 <hr/> 
 
 [Back to Table of Content](#index)
